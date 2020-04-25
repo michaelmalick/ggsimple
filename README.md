@@ -24,7 +24,7 @@ g <- ggplot(mpg) +
     geom_point(color = "grey40") +
     geom_smooth(method = "loess", color = "red3", span = 1, se = FALSE) +
     facet_wrap( ~ drv, nrow = 1) +
-    theme_simple(grid = TRUE)      ## simple theme
+    theme_simple()      ## simple theme
 print(g)
 ```
 
