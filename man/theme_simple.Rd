@@ -27,6 +27,4 @@ g <- ggplot(mpg) +
 
 g + theme_simple()
 g + theme_simple(grid = TRUE)
-
-ggsave("img.png", width = 7, height = 3, dpi = 300)
 }
