@@ -7,13 +7,15 @@ grey boxes around plot regions and clean facet labels.
 ## Installation
 The `ggsimple` package is not on CRAN, but can be installed from R using:
 
-    # install.packages("devtools")
-    devtools::install_github(repo = "michaelmalick/ggsimple")
+``` r
+# install.packages("devtools")
+devtools::install_github(repo = "michaelmalick/ggsimple")
+```
 
 
 ## Usage
 
-```
+``` r
 library(ggplot2)
 library(ggsimple)
 
