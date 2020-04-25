@@ -20,8 +20,6 @@
 #'
 #' g + theme_simple()
 #' g + theme_simple(grid = TRUE)
-#'
-#' ggsave("img.png", width = 7, height = 3, dpi = 300)
 #' @export
 theme_simple <- function(base_size = 11, base_family = "", grid = FALSE) {
     half_line <- base_size / 2

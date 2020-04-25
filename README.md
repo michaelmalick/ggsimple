@@ -5,7 +5,7 @@ grey boxes around plot regions and clean facet labels.
 
 
 ## Installation
-The `ggelement` package is not on CRAN, but can be installed from R using:
+The `ggsimple` package is not on CRAN, but can be installed from R using:
 
     # install.packages("devtools")
     devtools::install_github(repo = "michaelmalick/ggsimple")
