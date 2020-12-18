@@ -1,8 +1,8 @@
 Package: ggsimple
 Type: Package
 Title: ggsimple
-Version: 1.0
-Date: 2020-04-24
+Version: 1.1
+Date: 2020-12-18
 Author: Michael Malick
 Maintainer: Michael Malick <malickmj@gmail.com>
 Encoding: UTF-8
@@ -13,4 +13,4 @@ Imports:
     grid
 Description: Simple ggplot theme.
 License: file LICENSE
-RoxygenNote: 7.0.2
+RoxygenNote: 7.1.1

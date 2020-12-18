@@ -1,7 +1,9 @@
 # ggsimple
 
-This R package provides the `theme_simple` ggplot theme. The theme features thin
-grey boxes around plot regions and clean facet labels.
+This R package provides the `theme_simple` ggplot theme. Features include:
+- thin grey boxes around plot regions
+- clean facet labels
+- light and dark modes
 
 
 ## Installation
@@ -19,13 +21,17 @@ devtools::install_github(repo = "michaelmalick/ggsimple")
 library(ggplot2)
 library(ggsimple)
 
-g <- ggplot(mpg) +
-    aes(x = displ, y = hwy) +
-    geom_point(color = "grey40") +
-    geom_smooth(method = "loess", color = "red3", span = 1, se = FALSE) +
-    facet_wrap( ~ drv, nrow = 1) +
-    theme_simple()      ## simple theme
-print(g)
+g <- ggplot(CO2) +
+    aes(x = conc, y = uptake, color = Plant) +
+    geom_point() +
+    facet_grid(Treatment ~ Type)
+
+## Light mode (default)
+g + theme_simple(grid = TRUE)
+
+## Dark mode
+g + theme_simple(grid = TRUE, mode = "dark")
 ```
 
-<img src="man/figures/img.png" width="672" />
+<img src="man/figures/light.png" width="672"/>
+<img src="man/figures/dark.png" width="672" />

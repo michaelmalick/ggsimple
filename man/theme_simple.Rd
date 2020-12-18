@@ -4,7 +4,7 @@
 \alias{theme_simple}
 \title{A simple ggplot theme}
 \usage{
-theme_simple(base_size = 11, base_family = "", grid = FALSE)
+theme_simple(base_size = 11, base_family = "", grid = FALSE, mode = "light")
 }
 \arguments{
 \item{base_size}{Base text size}
@@ -12,6 +12,8 @@ theme_simple(base_size = 11, base_family = "", grid = FALSE)
 \item{base_family}{Base font family}
 
 \item{grid}{Logical, should major grid lines be drawn}
+
+\item{mode}{Background color mode, either "light" (default) or "dark"}
 }
 \description{
 A simple theme for ggplot with thin boxes around plot regions
@@ -19,12 +21,12 @@ A simple theme for ggplot with thin boxes around plot regions
 }
 \examples{
 library(ggplot2)
-g <- ggplot(mpg) +
-    aes(x = displ, y = hwy) +
-    geom_point(color = "grey40") +
-    geom_smooth(method = "loess", color = "red3", span = 1, se = FALSE) +
-    facet_wrap( ~ drv, nrow = 1)
+g <- ggplot(CO2) +
+    aes(x = conc, y = uptake, color = Plant) +
+    geom_point() +
+    facet_grid(Treatment ~ Type)
 
 g + theme_simple()
 g + theme_simple(grid = TRUE)
+g + theme_simple(grid = TRUE, mode = "dark")
 }
