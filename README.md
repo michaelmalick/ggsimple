@@ -27,11 +27,11 @@ g <- ggplot(CO2) +
     facet_grid(Treatment ~ Type)
 
 ## Light mode (default)
-g + theme_simple(grid = TRUE)
+g + theme_simple()
 
 ## Dark mode
 g + theme_simple(grid = TRUE, mode = "dark")
 ```
 
-<img src="man/figures/light.png" width="672"/>
-<img src="man/figures/dark.png" width="672" />
+<img src="man/figures/light.png" width="600"/>
+<img src="man/figures/dark.png" width="600" />
